@@ -392,6 +392,7 @@ class Heat(OSClient):
         kw_args = {}
         if self.credential.endpoint_type:
             kw_args["endpoint_type"] = self.credential.endpoint_type
+            kw_args["interface"] = self.credential.endpoint_type
 
         client = heat.Client(
             self.choose_version(version),
